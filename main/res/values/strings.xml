@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Warehouse</string>
+    <string name="nomenclature">Номенклатура</string>
+    <string name="add">Добавить</string>
+    <string name="print">печать</string>
+    <string name="back">назад</string>
+    <string name="added">Добавление</string>
+    <string name="name">Наименование</string>
+    <string name="reminder">Введите дату в поле</string>
+    <string name="saved">Успешно!</string>
+    <string name="reminder2">Введите номер документа</string>
+    <string name="reminder4">Выберите картинку</string>
+    <string name="reminder3">Заполните поля</string>
+    <string name="reminder5">Данный номер уже есть в системе</string>
+    <string name="delete">Удалить</string>
+    <string name="units_measurement">Единица измерения</string>
+    <string name="input_unit">Введите ед.</string>
+    <string name="unit">Ед. измерения</string>
+    <string name="receipt_goods">Поступление товара</string>
+    <string name="reception">Прием от</string>
+    <string name="offs">Списание от</string>
+    <string name="data">дата: dd.MM.yyyy</string>
+    <string name="nothing">.</string>
+    <string name="input_count_unit">Введите количество поступления:</string>
+    <string name="selected_pos">  Выберите позицию</string>
+    <string name="offs_goods">Списание товара</string>
+    <string name="textReport">Отчет</string>
+    <string name="enrollment">Зачисление</string>
+    <string name="off">Списание</string>
+    <string name="count">Количество:</string>
+    <string name="deleteAll">удалить все</string>
+</resources>

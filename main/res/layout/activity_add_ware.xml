@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AddWare">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="35dp"
+        android:layout_height="99dp"
+        android:layout_below="@id/nameTitle"
+        android:layout_above="@id/add_unit_layout"
+        android:orientation="horizontal" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imageContainer"
+        android:layout_width="368dp"
+        android:layout_height="277dp"
+        android:layout_below="@id/nameTitle"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="140dp"
+        android:background="@color/gray"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imNewImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_image_24" />
+
+        <ImageButton
+            android:id="@+id/imageEditBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="@string/add"
+            android:onClick="onClickChooseImage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_edit"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/imageDeleteBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="@string/add"
+            android:onClick="onClickDeleteImage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_delete"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/action_bar">
+
+        <RelativeLayout
+            android:id="@+id/upper_bg"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/blue"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <TextView
+                android:id="@+id/text_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="73dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/baloo_bhai_2_bold"
+                android:text="@string/added"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="350dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/blue"
+                android:contentDescription="@string/add"
+                android:onClick="saveNewProduct"
+                app:srcCompat="@drawable/checked_checkbox_48__1_" />
+
+            <ImageButton
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/blue"
+                android:contentDescription="@string/add"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:onClick="onClickHome"
+                app:srcCompat="@drawable/arrow_back" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Button_add_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:alpha="0.7"
+            android:backgroundTint="@color/blue"
+            android:clickable="true"
+            android:contentDescription="@string/add"
+
+            android:onClick="onClickAddImage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_baseline_image_24" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/nameTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_add"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        tools:ignore="NotSibling" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameTitle"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/baloo_bhai_2"
+        android:text="@string/units_measurement"
+        android:textSize="20sp"
+        android:layout_marginStart="30dp"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="164dp" />
+
+    <TextView
+        android:id="@+id/getUM"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/add"
+        android:layout_below="@+id/nameTitle"
+        android:layout_marginTop="19dp"
+        android:layout_marginStart="250dp"
+        android:text=" "
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="251dp"
+        tools:layout_editor_absoluteY="167dp" />
+
+    <Spinner
+        android:id="@+id/choosing_units_measurement"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:contentDescription="@string/add"
+        android:minHeight="48dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <FrameLayout
+        android:id="@+id/add_unit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="101dp"
+        android:layout_below="@id/getUM"
+        android:layout_marginTop="440dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="8dp">
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/gray"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/btDeleteUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="335dp"
+            android:layout_marginTop="46dp"
+            android:contentDescription="@string/add"
+            app:srcCompat="@android:drawable/ic_menu_delete"
+            android:onClick="onClickDeleteUnit"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/btAddUnit"
+            android:layout_width="54dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginStart="4dp"
+            android:contentDescription="@string/add"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/ic_menu_save" />
+
+        <EditText
+            android:id="@+id/etForInputUnit"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="43dp"
+            android:ems="10"
+            android:hint="@string/input_unit"
+            android:inputType="textPersonName"
+            android:visibility="gone"
+            android:minHeight="48dp" />
+
+        <ImageView
+            android:id="@+id/ivToUnit"
+            android:layout_width="44dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="340dp"
+            android:onClick="onClickToUnit"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/ic_menu_send" />
+
+
+    </FrameLayout>
+
+</RelativeLayout>

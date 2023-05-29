@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DocumentEnrollment">
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upper_bg"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="181dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="21dp"
+        android:ems="10"
+        android:hint="@string/data"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/numberDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upper_bg"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="181dp"
+        android:layout_marginEnd="21dp"
+        android:ems="10"
+        android:hint="."
+        android:inputType="number"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upper_bg"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/baloo_bhai_2_medium"
+        android:text="№ "
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="122dp"
+        android:layout_height="41dp"
+        android:layout_below="@+id/upper_bg"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="57dp"
+        android:fontFamily="@font/baloo_bhai_2_medium"
+        android:text="@string/reception"
+        android:textSize="20sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/upper_bg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue2">
+
+        <TextView
+            android:layout_width="267dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/baloo_bhai_2_bold"
+            android:text="@string/receipt_goods"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="350dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/blue2"
+            android:contentDescription="@string/add"
+            android:onClick="onClickSave"
+            app:srcCompat="@drawable/checked_checkbox_48__1_"/>
+
+        <ImageButton
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/blue2"
+            android:contentDescription="@string/add"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:onClick="onClickHome"
+            app:srcCompat="@drawable/arrow_back" />
+        />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="497dp"
+        android:layout_below="@+id/editTextDate"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/nezhni1"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/forImage"
+            android:layout_marginTop="20dp"
+            android:background="@color/blue3">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textForSpinner"
+            android:layout_width="280dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/baloo_bhai_2"
+            android:text="@string/selected_pos"
+            android:textSize="25sp" />
+
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/data"
+            android:minHeight="48dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="440dp"
+            android:background="@color/peach2"
+            android:orientation="vertical" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/forImage"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/spinner"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/blue3">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_of_num"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
